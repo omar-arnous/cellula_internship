@@ -1,0 +1,85 @@
+% \documentclass[conference]{IEEEtran}
+\documentclass{article}
+
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{url}
+\usepackage{hyperref}
+
+\begin{document}
+
+\title{A Comparative Study of ALBERT and DistilBERT: Efficient Transformer Models for Natural Language Processing}
+
+\author{\IEEEauthorblockN{Omar Arnous}
+\IEEEauthorblockA{Cellula Technologies \\
+NLP Internship \\
+omar99.arnous@gmail.com}
+}
+
+\maketitle
+
+\begin{abstract}
+The Bidirectional Encoder Representations from Transformers (BERT) model has become a cornerstone in Natural Language Processing (NLP), setting new benchmarks across a variety of tasks. However, BERT's large size and computational requirements limit its scalability in production environments. To address these limitations, researchers have developed lightweight variants such as ALBERT (A Lite BERT) and DistilBERT. This paper provides a comparative analysis of ALBERT and DistilBERT, focusing on their architectural innovations, efficiency gains, and performance trade-offs. We conclude that both approaches represent significant steps toward practical deployment of transformer-based models, but each serves distinct use cases depending on constraints of memory, speed, and accuracy.
+\end{abstract}
+
+\section{Introduction}
+Transformer-based architectures have revolutionized NLP, with BERT \cite{devlin2018bert} introducing bidirectional contextual embeddings that significantly improved performance on benchmarks such as GLUE and SQuAD. Despite these successes, BERT is computationally expensive, with 110M parameters in its base version and 340M in the large version. This restricts its adoption in environments with limited resources or requirements for real-time inference.
+
+To mitigate these challenges, researchers proposed more efficient models that preserve BERT's strengths while reducing size and inference time. Two prominent solutions are ALBERT \cite{lan2019albert} and DistilBERT \cite{sanh2019distilbert}. ALBERT employs parameter reduction strategies, while DistilBERT applies knowledge distillation techniques. This paper reviews both models, compares their methodologies, and highlights their applications.
+
+\section{ALBERT: A Lite BERT}
+ALBERT introduces two main techniques for reducing parameters:
+
+\subsection{Factorized Embedding Parameterization}
+Instead of directly mapping a large vocabulary to a high-dimensional embedding space, ALBERT factorizes the embedding matrix into two smaller matrices, decoupling the vocabulary size from the hidden dimension. This reduces memory requirements without degrading performance.
+
+\subsection{Cross-Layer Parameter Sharing}
+To further reduce model size, ALBERT shares parameters across layers. This eliminates redundancy and ensures that the number of parameters does not scale linearly with depth.
+
+\subsection{Performance}
+ALBERT achieves state-of-the-art results on benchmarks like GLUE while having significantly fewer parameters than BERT. For example, ALBERT-base has only 12M parameters compared to BERT-base's 110M, demonstrating its efficiency.
+
+\section{DistilBERT: Distilled BERT}
+DistilBERT employs knowledge distillation to compress BERT:
+
+\subsection{Knowledge Distillation Process}
+A smaller student model is trained to replicate the behavior of the larger BERT teacher model. DistilBERT matches the teacher's logits, hidden states, and embeddings, enabling the student to capture much of the teacher's knowledge.
+
+\subsection{Efficiency Gains}
+DistilBERT reduces the number of parameters by 40\% and runs 60\% faster at inference while retaining about 97\% of BERT's performance on benchmarks.
+
+\subsection{Applications}
+DistilBERT is well-suited for real-time applications, such as chatbots and question-answering systems, where speed is critical.
+
+\section{Comparison}
+\subsection{Approaches}
+ALBERT reduces parameters through architectural innovations, while DistilBERT compresses knowledge through distillation. Both aim to make transformers more efficient but differ in methodology.
+
+\subsection{Size and Speed}
+ALBERT achieves extreme parameter efficiency but may not always be faster due to deeper sharing across layers. DistilBERT provides faster inference but retains more parameters than ALBERT.
+
+\subsection{Performance Trade-offs}
+ALBERT often matches or surpasses BERT on benchmarks despite fewer parameters. DistilBERT maintains near-BERT performance with reduced latency, making it practical for deployment.
+
+\subsection{Use Cases}
+ALBERT is advantageous in research and memory-constrained environments. DistilBERT excels in production systems requiring quick responses.
+
+\section{Conclusion}
+Both ALBERT and DistilBERT represent important progress toward efficient NLP models. ALBERT demonstrates that parameter reduction strategies can maintain high performance with drastically fewer parameters, while DistilBERT shows that knowledge distillation can yield smaller, faster models suitable for real-time use. Future work may combine these approaches or extend them to multilingual and multimodal settings.
+
+\section*{References}
+\bibliographystyle{IEEEtran}
+\begin{thebibliography}{1}
+
+\bibitem{devlin2018bert}
+J.~Devlin, M.~Chang, K.~Lee, and K.~Toutanova, ``BERT: Pre-training of deep bidirectional transformers for language understanding,'' in \emph{Proceedings of NAACL-HLT}, 2019.
+
+\bibitem{lan2019albert}
+Z.~Lan, M.~Chen, S.~Goodman, K.~Gimpel, P.~Sharma, and R.~Soricut, ``ALBERT: A Lite BERT for self-supervised learning of language representations,'' in \emph{International Conference on Learning Representations (ICLR)}, 2020.
+
+\bibitem{sanh2019distilbert}
+V.~Sanh, L.~Debut, J.~Chaumond, and T.~Wolf, ``DistilBERT, a distilled version of BERT: smaller, faster, cheaper and lighter,'' \emph{arXiv preprint arXiv:1910.01108}, 2019.
+
+\end{thebibliography}
+
+\end{document}
