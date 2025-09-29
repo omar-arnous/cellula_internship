@@ -3,3 +3,5 @@ torch
 pandas
 streamlit
 Pillow
+matplotlib
+dotenv

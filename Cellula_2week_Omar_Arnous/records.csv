@@ -1,0 +1,5 @@
+image_caption,user_text,combined_input,label,score
+"a black background with a colorful text that reads, no one should be in the same place",concurrentl pakcage is great,"a black background with a colorful text that reads, no one should be in the same place. concurrentl pakcage is great",ERROR,0.0
+bmw cars is great,specially the bmw e30,bmw cars is great. specially the bmw e30,ERROR,0.0
+a computer screen with a spreads on it,wrong values in excell files,a computer screen with a spreads on it. wrong values in excell files,ERROR,0.0
+a computer screen with a spreads on it,wrong values in excell files,a computer screen with a spreads on it. wrong values in excell files,ERROR,0.0

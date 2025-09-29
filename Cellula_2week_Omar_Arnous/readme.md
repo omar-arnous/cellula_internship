@@ -35,6 +35,8 @@ The system is composed of **three main parts**:
   - We used **BLIP v1** (lighter & faster than BLIP v2).
   - Chosen because it can be downloaded and run locally (since Hugging Face does not offer a free API for BLIP).
 
+- [`Understanding BLIP: A Huggingface Model`](https://www.geeksforgeeks.org/artificial-intelligence/understanding-blip-a-huggingface-model/)
+
 - If a caption is entered manually, we skip this step and use the provided text directly.
 
 ### 2. Classification ([`main.py`](./main.py))
@@ -111,7 +113,7 @@ HF_TOKEN=your_api_key_here
 ### 5. Run the app
 
 ```bash
-streamlit run classifier.py
+streamlit run main.py
 ```
 
 ---
