@@ -1,8 +1,9 @@
-datasets
+streamlit
+faiss-cpu # faiss-gpu if you have a compatible GPU
 numpy
-pandas
-transformers
-torch
-requests
-scikit-learn
+huggingface-hub
+openai
+python-dotenv
 sentence-transformers
+datasets
+transformers

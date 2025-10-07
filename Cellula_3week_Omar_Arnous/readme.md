@@ -10,7 +10,6 @@ This project is a **simple RAG** that genrates code based on entered prompt.
 The goal of this project is mainly **educational**:
 
 - To practice making RAG system.
-- To experiment with deployment using **Streamlit**.
 
 ---
 
@@ -18,19 +17,11 @@ The goal of this project is mainly **educational**:
 
 The system is composed of **three main parts**:
 
-### 1. Image input Handling ([`image_caption.py`](./image_caption.py))
+### 1. Load Dataset ([`data_loader.py`](./data_loader.py))
 
-- Users can **upload an image** or **enter a caption manually**.
-- If an image is uploaded, we use **BLIP (Bootstrapping Language-Image Pre-training)**, a multimodal model that converts images into text.
+- Train the RAG using the HumanEval Dataset.
 
-  - We used **BLIP v1** (lighter & faster than BLIP v2).
-  - Chosen because it can be downloaded and run locally (since Hugging Face does not offer a free API for BLIP).
-
-- [`Understanding BLIP: A Huggingface Model`](https://www.geeksforgeeks.org/artificial-intelligence/understanding-blip-a-huggingface-model/)
-
-- If a caption is entered manually, we skip this step and use the provided text directly.
-
-### 2. Classification ([`main.py`](./main.py))
+### 2. vector_db ([`main.py`](./main.py))
 
 - The caption (generated or manual) is **combined** with the additional user text.
 - This combined input is sent to a **sentiment analysis model**:
@@ -53,22 +44,13 @@ The system is composed of **three main parts**:
 
 ---
 
-## User Interface (Streamlit)
-
-The entire app is wrapped in a **Streamlit** UI for easy interaction:
-
-- Upload images / enter captions.
-- Enter additional text.
-- View generated captions, sentiment predictions, and scores.
-- See past records stored in CSV.
-
 ## Installation & Usage
 
 ### 1. Clone the repo
 
 ```bash
 git clone https://github.com/omar-arnous/cellula_internship
-cd Cellula_2week_Omar_Arnous
+cd Cellula_3week_Omar_Arnous
 ```
 
 ### 2. Create and activate a virtual environment
@@ -79,7 +61,7 @@ source myenv/bin/activate  # Mac/Linux
 myenv\Scripts\activate     # Windows
 ```
 
-### 3. Install dependencies
+### 3. Install dependencies (open the file and choose which faiss to install)
 
 ```bash
 pip install -r requirements.txt
