@@ -10,6 +10,7 @@ This project is a **simple RAG** that genrates code based on entered prompt.
 The goal of this project is mainly **educational**:
 
 - To practice making RAG system.
+- To experiment with deployment using **Streamlit**.
 
 ---
 
@@ -17,30 +18,46 @@ The goal of this project is mainly **educational**:
 
 The system is composed of **three main parts**:
 
-### 1. Load Dataset ([`data_loader.py`](./data_loader.py))
+### 1. vector_db ([`vector_db.py`](./src/vector_db.py))
 
-- Train the RAG using the HumanEval Dataset.
+- A vector database (like FAISS, Chroma, Pinecone, Qdrant, etc.) is a special type of database designed to store and search through vector embeddings — which are numeric representations of text, images, or other data.
 
-### 2. vector_db ([`main.py`](./main.py))
+- Each document or text chunk gets converted into a vector (a list of floating-point numbers) using an embedding model, e.g. sentence-transformers/all-MiniLM-L6-v2.
 
-- The caption (generated or manual) is **combined** with the additional user text.
-- This combined input is sent to a **sentiment analysis model**:
+- Similar texts will have similar vectors, meaning their numerical representations will be close together in multidimensional space.
 
-  - [`cardiffnlp/twitter-roberta-base-sentiment-latest`](https://huggingface.co/cardiffnlp/twitter-roberta-base-sentiment-latest)
-  - A variant of **RoBERTa** pre-trained specifically for sentiment classification.
+### 2. generator ([`generator.py`](./src/generator.py))
 
-- The output is a **label** (`positive`, `negative`, `neutral`) and a **confidence score**.
-- The model is accessed via the **Hugging Face Inference API**, so no heavy local downloads are needed.
+- the Generator is the component responsible for producing new code based on the context you provide.
+- Think of it as the “writing engine” that transforms the retrieved knowledge into a complete solution.
+- How it works in the pipeline:
 
-### 3. Data Storage ([`data.csv`](./data.csv))
+1. Input:
+   The generator receives a prompt built from two things:
+   . The user’s query (e.g., “Write a function to check if a string is a palindrome”)
 
-- Every classification result is stored in a CSV file for tracking.
-- Each row contains:
-  - `image_caption`
-  - `user_text`
-  - `combined_input`
-  - `label`
-  - `score`
+   . The retrieved code snippets from the vector database (examples of similar tasks from HumanEval)
+
+2. Processing:
+   The generator uses a code generation model (like StarCoder, CodeGen, or CodeLlama) to “fill in” the solution.
+
+   . It sees the patterns, style, and structure from the retrieved examples.
+
+   . It predicts tokens step by step until the function is complete or a stop condition is reached.
+
+3. Output:
+
+. A full Python function or snippet that solves the query.
+
+. Optionally, you can also generate multiple candidates or variants.
+
+### 3. Rag Pipeline ([`rag_pipeling.py`](./src/rag_pipeline.py))
+
+- The RAG (Retrieval-Augmented Generation) Pipeline combines retrieval and generation to produce high-quality, context-aware code.
+
+- It works by first retrieving relevant coding examples from a dataset (like HumanEval) using a vector database and embeddings, then feeding those examples along with the user’s query to a code generation model.
+
+- This ensures the generated code is grounded in real examples, improving accuracy and relevance while adapting to the specific task described in natural language.
 
 ---
 
@@ -70,22 +87,30 @@ pip install -r requirements.txt
 Key dependencies:
 
 - `transformers`
-- `torch`
-- `pandas`
+- `faiss-cpu # faiss-gpu if you have a compatible GPU`
+- `numpy`
 - `streamlit`
-- `Pillow`
+- `openai`
+- `huggingface-hub`
+- `python-dotenv`
+- `sentence-transformers`
+- `datasets`
+- `dotenv`
 
-### 3. Add your Hugging Face API key
+### 3. Add your Hugging Face and open router API keys
 
 Create a `.env` file:
 
 ```
-HF_TOKEN=your_api_key_here
+HF_TOKEN=your_hugging_face_api_key_here
+LLM_ID=your_open_router_api_key_here
 ```
 
 ### 5. Run the app
 
 ```bash
+python generate_humaneval_data.py
+python generate_embeddings.py
 streamlit run main.py
 ```
 
