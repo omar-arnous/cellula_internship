@@ -51,7 +51,7 @@ The system is composed of **three main parts**:
 
 . Optionally, you can also generate multiple candidates or variants.
 
-### 3. Rag Pipeline ([`rag_pipeling.py`](./src/rag_pipeline.py))
+### 3. Rag Pipeline ([`rag_pipeline.py`](./src/rag_pipeline.py))
 
 - The RAG (Retrieval-Augmented Generation) Pipeline combines retrieval and generation to produce high-quality, context-aware code.
 
