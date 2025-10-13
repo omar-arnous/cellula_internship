@@ -110,7 +110,7 @@ Create a `.env` file:
 HF_TOKEN=your_api_key_here
 ```
 
-### 5. Run the app
+### 4. Run the app
 
 ```bash
 streamlit run main.py
