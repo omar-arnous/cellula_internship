@@ -1,0 +1,14 @@
+[
+  {
+    "query": "What is reinforcement learning?",
+    "expected_context": [
+      "Reinforcement learning is a type of machine learning where an agent learns by interacting with an environment and receiving rewards or penalties."
+    ]
+  },
+  {
+    "query": "Who regulates AI copyright in the United States?",
+    "expected_context": [
+      "The United States Copyright Office (USCO) regulates copyright issues related to AI-generated works."
+    ]
+  }
+]

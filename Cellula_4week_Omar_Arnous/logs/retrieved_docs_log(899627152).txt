@@ -1,0 +1,11 @@
+
+Chat history for session 899627152:
+content='what products you serve?' additional_kwargs={} response_metadata={}
+content="We serve a variety of products, including electronics, home appliances, and personal care items. Our product range is designed to cater to different needs and preferences, ensuring that customers can find what they're looking for. If you have a specific product in mind, I'd be happy to try and provide more information on it." additional_kwargs={} response_metadata={}
+----------------------------------------------------------------------------------------------------
+
+User (899627152) question: what products you serve?
+Answer:
+We serve a variety of products, including electronics, home appliances, and personal care items. Our product range is designed to cater to different needs and preferences, ensuring that customers can find what they're looking for. If you have a specific product in mind, I'd be happy to try and provide more information on it.
+====================================================================================================
+

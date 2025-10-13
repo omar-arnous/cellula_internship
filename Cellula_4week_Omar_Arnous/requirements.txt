@@ -1,0 +1,10 @@
+dotenv
+huggingface_hub
+langchain_chroma
+langchain_openai
+langchain_core
+python-telegram-bot
+nltk
+wikipedia
+numpy
+deepeval

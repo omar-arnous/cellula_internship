@@ -1,0 +1,68 @@
+
+Chat history for session 5660513415:
+content='شو هالشغل هاد \nالبوت قليل احترام ما برد' additional_kwargs={} response_metadata={}
+content='أنا آسف لأنني لا أستطيع فهم ما تقوله بشكل صحيح. هل يمكنك أن تكرر السؤال أو التعبير بطريقة أخرى؟ سأجتهد لتقديم المساعدة لك بهدوء و احترام.' additional_kwargs={} response_metadata={}
+----------------------------------------------------------------------------------------------------
+
+User (5660513415) question: شو هالشغل هاد 
+البوت قليل احترام ما برد
+Answer:
+أنا آسف لأنني لا أستطيع فهم ما تقوله بشكل صحيح. هل يمكنك أن تكرر السؤال أو التعبير بطريقة أخرى؟ سأجتهد لتقديم المساعدة لك بهدوء و احترام.
+====================================================================================================
+
+
+Chat history for session 5660513415:
+content='مرحبا' additional_kwargs={} response_metadata={}
+content='مرحبا! كيف يمكنني مساعدتك اليوم؟' additional_kwargs={} response_metadata={}
+----------------------------------------------------------------------------------------------------
+
+User (5660513415) question: مرحبا
+Answer:
+مرحبا! كيف يمكنني مساعدتك اليوم؟
+====================================================================================================
+
+
+Chat history for session 5660513415:
+content='مرحبا' additional_kwargs={} response_metadata={}
+content='مرحبا! كيف يمكنني مساعدتك اليوم؟' additional_kwargs={} response_metadata={}
+content='what can you help me with' additional_kwargs={} response_metadata={}
+content="I can assist you with a variety of topics. Are you looking for help with something specific, such as a product, service, or perhaps you have a question? I'm here to provide information and support to the best of my abilities." additional_kwargs={} response_metadata={}
+----------------------------------------------------------------------------------------------------
+
+User (5660513415) question: what can you help me with
+Answer:
+I can assist you with a variety of topics. Are you looking for help with something specific, such as a product, service, or perhaps you have a question? I'm here to provide information and support to the best of my abilities.
+====================================================================================================
+
+
+Chat history for session 5660513415:
+content='مرحبا' additional_kwargs={} response_metadata={}
+content='مرحبا! كيف يمكنني مساعدتك اليوم؟' additional_kwargs={} response_metadata={}
+content='what can you help me with' additional_kwargs={} response_metadata={}
+content="I can assist you with a variety of topics. Are you looking for help with something specific, such as a product, service, or perhaps you have a question? I'm here to provide information and support to the best of my abilities." additional_kwargs={} response_metadata={}
+content='from where do you get your data' additional_kwargs={} response_metadata={}
+content="I'm a large language model, I don't have direct access to any specific data source. My responses are generated based on my training data, which is a massive corpus of text that I was trained on. This training data allows me to understand and generate human-like text." additional_kwargs={} response_metadata={}
+----------------------------------------------------------------------------------------------------
+
+User (5660513415) question: from where do you get your data
+Answer:
+I'm a large language model, I don't have direct access to any specific data source. My responses are generated based on my training data, which is a massive corpus of text that I was trained on. This training data allows me to understand and generate human-like text.
+====================================================================================================
+
+
+Chat history for session 5660513415:
+content='مرحبا' additional_kwargs={} response_metadata={}
+content='مرحبا! كيف يمكنني مساعدتك اليوم؟' additional_kwargs={} response_metadata={}
+content='what can you help me with' additional_kwargs={} response_metadata={}
+content="I can assist you with a variety of topics. Are you looking for help with something specific, such as a product, service, or perhaps you have a question? I'm here to provide information and support to the best of my abilities." additional_kwargs={} response_metadata={}
+content='from where do you get your data' additional_kwargs={} response_metadata={}
+content="I'm a large language model, I don't have direct access to any specific data source. My responses are generated based on my training data, which is a massive corpus of text that I was trained on. This training data allows me to understand and generate human-like text." additional_kwargs={} response_metadata={}
+content="you don't answer my question" additional_kwargs={} response_metadata={}
+content='Unfortunately, I don’t have the information needed to assist with this request.' additional_kwargs={} response_metadata={}
+----------------------------------------------------------------------------------------------------
+
+User (5660513415) question: you don't answer my question
+Answer:
+Unfortunately, I don’t have the information needed to assist with this request.
+====================================================================================================
+
