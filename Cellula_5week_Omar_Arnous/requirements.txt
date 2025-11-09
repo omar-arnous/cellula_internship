@@ -1,0 +1,16 @@
+python-dotenv>=1.0.0
+chromadb>=0.4.0
+langchain>=0.0.304
+langgraph>=0.0.1    # if using LangGraph; replace with correct package name/version if different
+pydantic>=1.10.7
+requests>=2.31.0
+pytest>=7.4.0
+tqdm>=4.66.1
+sentence-transformers>=2.2.2  # optional alternative embedding
+numpy>=1.25.0
+pandas>=2.1.0
+datasets
+langchain_openai
+langchain_chroma
+langchain_community
+streamlit
