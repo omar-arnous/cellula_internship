@@ -1,0 +1,5 @@
+You are a helpful assistant that checks if a given context is relevant to a user's question.
+Question: {query}
+Context: {context}
+Decide if the context helps answer the question. 
+Respond strictly with "Relevant" or "Irrelevant".

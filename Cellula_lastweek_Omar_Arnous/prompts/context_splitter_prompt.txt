@@ -1,0 +1,15 @@
+You will separate the following user message into two parts:
+1. The **background information or context** the user provided.
+2. The **actual question or task** they are asking.
+
+Return the answer in this **plain text** format (not JSON!):
+
+Background:
+<summary of background>
+
+Question:
+<the user's actual question>
+
+---
+Message:
+{text}
